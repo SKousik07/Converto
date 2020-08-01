@@ -1,0 +1,56 @@
+{%extends "main.html" %}
+{% block file %}
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="static/styles/fontawesome/css/fontawesome-all.css">
+
+
+	<link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+</head>
+<style type="text/css">
+	
+     input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  padding: 10px;
+}
+    
+    </style>
+    <div class="center">
+
+    <div colo><p>{{data}}</p></div>
+    <div>
+     <img src="/static/uploads/docicon.png" style="width:2% ;height:25px"><a href="/static/uploads/output.docx" download>download output file</a>
+     <p>or</p>
+
+     <audio id="myAudio">
+
+        <source src="/static/uploads/welcome1.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+     </audio>
+     
+     <button class="btn" onclick="playAudio()" type="button" ><i class="fa fa-play-circle"></i>Play Audio</button>
+
+    </div>
+    
+    </div>
+   
+     <script type="text/javascript">
+        var x = document.getElementById("myAudio"); 
+       function playAudio() { 
+         x.play(); 
+      }
+      </script> 
+{% endblock %}
